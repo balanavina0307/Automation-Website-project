@@ -7,20 +7,19 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
-public class collecions {
+public class collecions extends web {
 
 	
 		@FindBy(xpath = "//span[text()='Log In']")
-		private WebElement login;
+		private WebElement login3;
 		 public WebElement clklog() {
-			 return login;
+			 return login3;
 			 
 		 }
 		 @FindBy(id = "googleSM_ROOT_COMP891")
 			private WebElement sle;
 			public WebElement gppgle() {
-				return sle;
-				
+				return sle;				
 			}
 		@FindBy(xpath = "//span[text()='Sign up with email']")
 		private WebElement email;
@@ -35,16 +34,27 @@ public class collecions {
 		@FindBy(id = "input_input_passwordInput_SM_ROOT_COMP902")
 		private WebElement pass;
 		public WebElement passk() {
-			return pass;
-			
-		}
-		
-		
-		
+			return pass;			
+		}		
 		@FindBy(xpath = "//span[text()='Sign Up']")
 		private WebElement sign;
 		public WebElement sing() {
 			return sign;
 		}
+		
+		//newsletter
+		
+		@FindBy(id = "input_comp-loxtjpi6")
+		private WebElement emaill;
+		public WebElement mail(String maill) {
+			return emaill;
+		}
+		
+		@FindBy(xpath = "//input[@name='your-name ']")
+		private WebElement name;
+		public WebElement namee(String namee ) {
+			return name;
+		}
+		
 	}
 

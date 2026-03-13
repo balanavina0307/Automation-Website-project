@@ -7,14 +7,16 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 
 public class test extends web {
+	collecions c = new collecions();
 	//login
-	@Ignore		
 	
+		@Ignore
 		@Test (priority = 1 )
 		public  void bala() throws InterruptedException {
 			browser("chrome");
@@ -57,68 +59,53 @@ public class test extends web {
 			allitems();
 			search();
 //			quiet();
+			
+		c.login();
+		
 		}
 	
 		//Add To Cart
-	@Ignore
-		@Test(priority = 2 )
+		@Ignore
+		@Test(priority = 2 , invocationCount = 1)
 		public void balaj() throws InterruptedException, AWTException {
 			browser("chrome");
 			url("https://www.kuoe-en.com/");
 			maximize();
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-				
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));				
 			Thread.sleep(3000);
 			contini();
-			 accepp();
-			
-			
-			home();
-			
-			bestsell();
-			
+			 accepp();						
+			home();			
+			bestsell();			
 			dial();
-			navy();		
-			
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-			
-			brace();
-			
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-			
-			Act();
-			
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-			
+			navy();				
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));			
+			brace();			
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));			
+			Act();			
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));			
 			addcart();
 			viewcart();
 			checkout();
 			quiet();
 		}
-		//
-		@Ignore
-		@Test()
+		//addto cart 2
+		
+		@Test(	)
 		public void monika() throws InterruptedException, AWTException {
 			browser("chrome");
-			 
-
 			 url("https://www.kuoe-en.com/");
-
-		       
-			
-			maximize();
+			 maximize();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			Thread.sleep(3000);
 			contini();
-			 accepp();		
-			 
-			 
+			 accepp();			 
 			home();			
 			bestsell();					
 			dial();
 			navy();				
-			Thread.sleep(3000);
-			brace();
+			Thread.sleep(3000);			
+  		    brace();
 			Thread.sleep(3000);
 			Thread.sleep(3000);
 			Act();
@@ -126,9 +113,17 @@ public class test extends web {
 			Thread.sleep(3000);
 			
 			addcart();
-
+			Thread.sleep(9000);
+			viewcartt();
+//			 rob();
+			
+			
+//			viewct();
+//			viewcart();
+//			checkout();
 		}
-		
+		//collection to cart
+		@Ignore
 		@Test()
 		public void tested() throws InterruptedException {
 			browser("chrome");
@@ -141,28 +136,69 @@ public class test extends web {
 			 collect();
 			 automodels();
 			 crt();
+			 crt1();
+			 model();
 			 cartt();
-			 
+//			 addtocart();
+			 cart2();
 //			 quiet();
 			
 			 		 
 		}
+		//end to all 
+		
 		@Ignore
 		@Test()
-		public void allit() throws InterruptedException {
-			browser("chrome");
+		public void allit() throws InterruptedException, AWTException {
+			browser("chrome");			
 			url("https://www.kuoe-en.com/");	
+			
 			maximize();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			
 			contini();
-			 accepp();			 
+			 accepp();
+			 home();
+			 collect();
 			 allitems();
-			 Thread.sleep(3000);
+			 about();
+			 search();
+//			 Stores();
 			 
-			 jsexcute();
-//			 sorttttt();
-			 sortt2();
+			 rob();
+		}
+		@Ignore
+		@Test()
+		public void newsletter() throws InterruptedException {
+			browser("chrome");			
+			url("https://www.kuoe-en.com/");	
+			
+			maximize();
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+			
+			contini();
+			 accepp();
+			 home();
+			 collect();
+			 home();
+			 news();
+			 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+			 nsmail();
+			 nsname();
+			 subscribe();
+		}
+		@Ignore
+		@Test()
+		public void pomn() throws InterruptedException, AWTException {
+			browser("chrome");
+			maximize();			 
+			 url("https://www.kuoe-en.com/");
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+			contini();
+			 accepp();
+			 rob();
+			 
 			 
 		}
+			
 }

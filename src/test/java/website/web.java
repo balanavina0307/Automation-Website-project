@@ -81,7 +81,7 @@ public class web {
 		//set value		  
 		  public static void entermail() {
 			  WebElement email = driver.findElement(By.xpath("(//input[@type='email'])[2]"));
-			  email.sendKeys("yedoj32190@hlkes.com");
+			  email.sendKeys("monas51428@flosek.com");
 			  email.click();
 		  }
 		  public static void passwrd() {
@@ -104,6 +104,7 @@ public class web {
 			  WebElement sig = driver.findElement(By.xpath("//span[text()='Sign Up']"));
 			  sig.click();
 		  }
+		  // pin to confirm 
 		  public static void coifirm() {
 			  WebElement confirm = driver.findElement(By.xpath("//span[text()='Confirm & Sign Up']"));
 			  confirm.click();
@@ -119,19 +120,33 @@ public class web {
 			}
 			public static void crt() {
 			driver.findElement(By.xpath("//span[contains(text(),'90-002')]")).click();
-			WebElement quick = driver.findElement(By.xpath("//*[@class='QHl0ZB sSKK6OY']"));
+			}
+			public static void crt1() {
+			WebElement quick = driver.findElement(By.xpath("//button[@type='button']"));
 			JavascriptExecutor jgd =  (JavascriptExecutor) driver;
 			jgd.executeScript("arguments[0].scrollIntoView(true)", quick);
 			}
+			public static void model() {
+			driver.findElement(By.xpath("(//div[@class='Wo6AuW vALCqq'])[10]")).click();
+			}
+			
+			
 			public static void cartt() {
-			WebElement item = driver.findElement(By.xpath("(//*[@class='QHl0ZB sSKK6OY'])[10]"));
+							
+			WebElement item = driver.findElement(By.xpath("//legend[@class='sZrxGiH']"));						
 			JavascriptExecutor it =  (JavascriptExecutor) driver;
 			it.executeScript("arguments[0].scrollIntoView(true)", item);
-			
-			}public static void cart2() {
-				
-				driver.findElement(By.xpath("//button[@data-hook='add-to-cart']")).click();
 			}
+			public static void addtocart() {
+//			driver.findElement(By.xpath("//span[text()='Add to Cart']")).click();
+			
+			}
+			public static void cart2() {
+				driver.findElement(By.xpath("(//button[@type='button'])[21]")).click();
+				
+//				driver.findElement(By.xpath("//button[@data-hook='add-to-cart']")).click();
+			}
+			
 			public static void smith1() {
 				driver.findElement(By.xpath("//span[text()='OLD SMITH 90-001　≫']")).click();
 				
@@ -140,11 +155,6 @@ public class web {
 				WebElement c = driver.findElement(By.xpath("//span[text()='₹‌10,200.00']"));
 				c.click();
 			}
-			public static void home() {
-				WebElement hom = driver.findElement(By.id("DrpDwnMn00label"));
-				hom.click();
-			}
-			
 			
 			//All items 
 			public static void allitems() {
@@ -162,7 +172,11 @@ public class web {
 				WebElement el = driver.findElement(By.xpath("//span[text()='Newest']"));
 				el.click();
 			}
-			
+			//homepage
+			public static void home() {
+				WebElement hom = driver.findElement(By.id("DrpDwnMn00label"));
+				hom.click();
+			}			
 			//down best selling
 			public static void bestsell() {
 				WebElement best = driver.findElement(By.xpath("//span[text()='BEST SELLERS']"));
@@ -191,10 +205,12 @@ public class web {
 				JavascriptExecutor nv = (JavascriptExecutor) driver;
 				nv.executeScript("arguments[0].scrollIntoView(true);", nav);
 			}
-			public static void brace() throws AWTException, InterruptedException  {
-				
 			
-				
+			public static void se() {
+			driver.findElement(By.xpath("//div[text()='Select']")).click();
+			}
+			//Tab methods
+			public static void brace() throws AWTException, InterruptedException  {		
 				Robot r = new Robot();
 				for(int i=1;i<=19;i++) {
 					
@@ -216,20 +232,31 @@ public class web {
 				driver.findElement(By.xpath("//button[@aria-live='assertive']")).click();
 
 			}
+			public static void viewct() {
+				
+				WebElement vi = driver.findElement(By.xpath("//span[@class='wixui-rich-text__text']"));
+				JavascriptExecutor od = (JavascriptExecutor) driver;
+				od.executeScript("arguments[0].scrollIntoView(false)", vi);
+				
+				driver.findElement(By.xpath("//div[@class='Q8TtId']")).click();
+				
+			}
 			public static void viewcart() {
-				driver.findElement(By.id("widget-view-cart-button")).click();
-			
+				driver.findElement(By.xpath("//a[@class='button-primary is-button-wide']")).click();
+				
 			}
 			public static void checkout() {
-			driver.findElement(By.xpath("//span[text()='Checkout']")).click();
-			
+			WebElement order = driver.findElement(By.xpath("//h2[text()='Order summary']"));
+			JavascriptExecutor od = (JavascriptExecutor) driver;
+			od.executeScript("arguments[0].scrollIntoView(true)", order);
+			driver.findElement(By.xpath("//button[@data-hook='CheckoutButtonDataHook.button']")).click();
 			}
 			public static void panda2() {
 				
 				WebElement best1 = driver.findElement(By.xpath("//h1[contains(text(),'Automatic Panda')]"));
 
 				JavascriptExecutor jss = (JavascriptExecutor) driver ;
-				jss.executeScript("arguments[0].scrollIntoView({block:'center'});", best1);
+				jss.executeScript("arguments[0].scrollIntoView(true)", best1);
 			}
 			public static void Bracelet() {
 				
@@ -252,6 +279,17 @@ public class web {
 			
 			driver.findElement(By.id("DrpDwnMn04label")).click();
 			}
+			//store
+			public static void Stores() {
+				driver.findElement(By.id("DrpDwnMn03label")).click();
+				
+//				WebElement flag = driver.findElement(By.id("comp-ls4cjfd7"));
+				
+				WebElement flag1= driver.findElement(By.xpath("//span[contains(text(),'Eirakucho')]"));
+				JavascriptExecutor st = (JavascriptExecutor) driver ;
+				st.executeScript("arguments[0].scrollIntoView(true)", flag1);
+						
+			}
 			
 			public static void search() {
 			driver.findElement(By.id("DrpDwnMn05label")).click();	
@@ -268,7 +306,42 @@ public class web {
 			JavascriptExecutor mkl = (JavascriptExecutor) driver ;
 			mkl.executeScript("arguments[0].click()", ctu);
 			}
+			public static void news() {
+				WebElement news  = driver.findElement(By.xpath("//span[contains(text(),'Newsletter')]"));
+				JavascriptExecutor js4 = (JavascriptExecutor) driver;
+				js4.executeAsyncScript("arguments[0].scrollIntoView(true)", news);
+			}
+			public static void nsmail() {
+				WebElement ns = driver.findElement(By.id("input_comp-loxtjpi6"));
+				ns.sendKeys("balaji@gmail.com");
+			}
+			public static void nsname() {
+				WebElement nn = driver.findElement(By.xpath("//input[@name='your-name '])"));
+				nn.sendKeys("balaji@gmail.com");
+			}
 			
+			public static void subscribe() {
+				driver.findElement(By.xpath("//span[text()='Subscribe']")).click();
+			}
+			public static void viewcartt() {
+				driver.switchTo().frame("tpapopup-1773395610376_rtby_i3ixzbcr");
+				 driver.findElement(By.id("widget-view-cart-button")).click();
+				
+			}
+			public static void rob() throws AWTException, InterruptedException {
+				WebElement head = driver.findElement(By.xpath("//a[@class='j7pOnl']"));
+				JavascriptExecutor h = (JavascriptExecutor) driver;
+				h.executeScript("arguments[0].scrollIntoView(false)", head);
+				
+				Robot r = new Robot();
+				for(int i=0;i<3;i++) {
+					r.keyPress(KeyEvent.VK_TAB);
+					r.keyRelease(KeyEvent.VK_TAB);
+					Thread.sleep(3000);
+				}
+				r.keyPress(KeyEvent.VK_ENTER);
+				r.keyRelease(KeyEvent.VK_ENTER);
+			}
 }
 			
 
